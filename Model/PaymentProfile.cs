@@ -11,21 +11,6 @@ namespace IntegracaoVindi.API.Model
         public  PaymentProfile paymentProfile { get; set; }
     }
 
-    public class PaymentCompany
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string code { get; set; }
-    }
-
-    public class PaymentMethod
-    {
-        public int id { get; set; }
-        public string public_name { get; set; }
-        public string name { get; set; }
-        public string code { get; set; }
-        public string type { get; set; }
-    }
 
   
     public class PaymentProfile
