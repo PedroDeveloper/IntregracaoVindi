@@ -7,6 +7,10 @@ using IntegracaoVindi.API.Model;
 
 namespace IntegracaoVindi.API.Model
 {
+        public class BillHolder
+    {
+        public Bill bill { get; set; }
+    }
     public class Bill
     {
         public int? id { get; set; }
@@ -29,11 +33,6 @@ namespace IntegracaoVindi.API.Model
         public PaymentProfile PaymentProfile { get; set; }
         public PaymentCondition? payment_condition { get; set; }
     }
-
-        public class BillHolder
-        {
-            public List<Bill> bills { get; set; }
-        }
         public class PaymentCondition
         {
             public int? penalty_fee_value { get; set; }

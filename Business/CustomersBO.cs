@@ -48,10 +48,11 @@ namespace IntegracaoVindi.API.Business
         public Customer Insert(Customer customer)
         {
             string result;
+			string costumerJson;
             CustomerHolder customerHolder;
             try
             {
-                var costumerJson = Newtonsoft.Json.JsonConvert.SerializeObject(customer);
+                costumerJson = Newtonsoft.Json.JsonConvert.SerializeObject(customer);
                 result = ApiHelper.HttpPostJson("https://app.vindi.com.br/api/v1/customers", costumerJson);
                 customerHolder = JsonConvert.DeserializeObject<CustomerHolder>(result);
 
@@ -100,7 +101,7 @@ namespace IntegracaoVindi.API.Business
 			try
 			{
 				result = ApiHelper.HttpGet("https://app.vindi.com.br/api/v1/customers");
-				customers = JsonConvert.DeserializeObject<List<Customer>>(result.Replace("{\"customers\":","").Replace("}]}]}", "}]}]"));
+				customers = JsonConvert.DeserializeObject<List<Customer>>(result.Replace("{\"customers\":", "").Replace("}]}", "}]"));
 
 				return customers;
 

@@ -27,7 +27,7 @@ namespace IntegracaoVindi.API.Controllers
 			_config = config;
 		}
 
-
+		[EnableCors("Policy1")]
 		[HttpGet]
         public IActionResult Get()
         {
@@ -57,20 +57,21 @@ namespace IntegracaoVindi.API.Controllers
         }
 
 
-
-        [HttpPost]
+		[EnableCors("Policy1")]
+		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult Post([FromBody] Bill bill)
+		public IActionResult Post([FromBody] InsertBill insertBill)
 		{
 			BillsBO billsBO;
-
+			Bill bill;
 			try
 			{
-				_log.LogInformation($"Starting Post('{JsonConvert.SerializeObject(bill, Formatting.None)}')");
+				bill = new Bill();
+				_log.LogInformation($"Starting Post('{JsonConvert.SerializeObject(insertBill, Formatting.None)}')");
 
 				billsBO = new BillsBO(_loggerFactory, _config);
-					//bill = billsBO.Insert(bill);
+					bill = billsBO.Insert(insertBill);
 
                 _log.LogInformation($"Finishing Post");
 			

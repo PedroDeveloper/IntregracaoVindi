@@ -25,35 +25,35 @@ namespace IntegracaoVindi.API.Business
 			_config = config;
 		}
 
-		#region Change Data
+        #region Change Data
 
-		//public Bill Insert (Bill bill)
-		//{
-		//	string result;
-		//	BillHolder billHolderr;
-
-
-		//	try
-		//	{
-		//		var profileJson =  Newtonsoft.Json.JsonConvert.SerializeObject(bill);
-		//		result = ApiHelper.HttpPostJson("https://app.vindi.com.br/api/v1/bills", profileJson);
-		//		billHolderr = JsonConvert.DeserializeObject<BillHolder>(result);
-
-		//		return billHolderr.Bill;
-		//	}
-		//	catch (Exception exception)
-		//	{
-		//		throw exception;
-		//	}
-		//}
+        public Bill Insert(InsertBill bill)
+        {
+            string result;
+            BillHolder billHolderr;
 
 
-		#endregion
+            try
+            {
+                var profileJson = Newtonsoft.Json.JsonConvert.SerializeObject(bill);
+                result = ApiHelper.HttpPostJson("https://app.vindi.com.br/api/v1/bills", profileJson);
+                billHolderr = JsonConvert.DeserializeObject<BillHolder>(result);
 
-		#region Retrieve Repository
+                return billHolderr.bill;
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
 
 
-		public List<Bill> Get()	
+        #endregion
+
+        #region Retrieve Repository
+
+
+        public List<Bill> Get()	
 		{
 			string result;
 
@@ -62,7 +62,7 @@ namespace IntegracaoVindi.API.Business
 			try
 			{
 				result = ApiHelper.HttpGet("https://app.vindi.com.br/api/v1/bills");
-				paymentProfiles = JsonConvert.DeserializeObject<List<Bill>>(result.Replace("{\"bills\":", "").Replace("}]}", "}]"));
+				paymentProfiles = JsonConvert.DeserializeObject<List<Bill>>(result.Replace("{\"bills\":", "").Replace("condition\":null}]}", "condition\":null}]"));
 
 				return paymentProfiles;
 

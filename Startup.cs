@@ -30,7 +30,7 @@ namespace IntegracaoVindi.API
             services.AddCors(options =>
             {
                 options.AddPolicy("Policy1",
-                builder => builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+                builder => builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
             });
 
             services.AddControllers();

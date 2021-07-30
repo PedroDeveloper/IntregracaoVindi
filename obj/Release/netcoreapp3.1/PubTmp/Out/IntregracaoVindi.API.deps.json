@@ -29,7 +29,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "MultipliqueV2.API/1.0.0": {
+      "IntregracaoVindi.API/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.4",
@@ -320,10 +320,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "MultipliqueV2.API.dll": {}
+          "IntregracaoVindi.API.dll": {}
         },
         "compile": {
-          "MultipliqueV2.API.dll": {}
+          "IntregracaoVindi.API.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3762,7 +3762,7 @@
     }
   },
   "libraries": {
-    "MultipliqueV2.API/1.0.0": {
+    "IntregracaoVindi.API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

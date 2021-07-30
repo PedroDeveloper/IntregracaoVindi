@@ -30,13 +30,14 @@ namespace IntegracaoVindi.API.Business
 		public PaymentProfile Insert (InsertPaymentProfile insertPaymentProfile)
 		{
 			string result;
+			string profileJson;
 			PaymentProfile paymentProfile;
 
 
 			try
 			{
 				
-				var profileJson =  Newtonsoft.Json.JsonConvert.SerializeObject(insertPaymentProfile);
+				profileJson =  Newtonsoft.Json.JsonConvert.SerializeObject(insertPaymentProfile);
 				result = ApiHelper.HttpPostJson("https://app.vindi.com.br/api/v1/payment_profiles", profileJson);
 				paymentProfile = JsonConvert.DeserializeObject<PaymentProfile>(result.Replace("{\"payment_profile\":","").Replace("}}}", "}}"));
 
