@@ -10,7 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
-
+using System.IO;
+using System.Reflection;
+using Swashbuckle.Swagger;
 
 namespace IntegracaoVindi.API
 {
@@ -34,7 +36,13 @@ namespace IntegracaoVindi.API
             });
 
             services.AddControllers();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(opt =>
+            {
+                
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                opt.IncludeXmlComments(xmlPath);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +56,7 @@ namespace IntegracaoVindi.API
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
             }
             );
 

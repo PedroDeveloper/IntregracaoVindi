@@ -131,4 +131,9 @@ E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\Intre
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.pdb
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.genruntimeconfig.cache
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\IntregracaoVindi.API.xml
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.xml
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\System.Web.Http.dll
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\Swashbuckle.Core.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.csproj.AssemblyReference.cache

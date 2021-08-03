@@ -27,6 +27,10 @@ namespace IntegracaoVindi.API.Controllers
 			_config = config;
 		}
 
+		/// <summary>
+		/// Retorno os clientes cadastrados
+		/// </summary>
+		/// <returns>Dados do cliente Criado</returns>
 
 		[HttpGet]
         public IActionResult Get()
@@ -56,10 +60,27 @@ namespace IntegracaoVindi.API.Controllers
             return response;
         }
 
+		/// <summary>
+		/// Cria cliente.
+		/// </summary>
+		/// <returns>Dados da fatura Criada</returns>
+		/// <remarks>
+		/// <para>
+		///		
+		/// </para>
+		///	<![CDATA[ Unico campo obrigatório é o <b><font color=#FF0000>name</font></b> </br>
+		///	Contudo para gerar uma fatura é obrigatório que o cliente tenha o documento (<b><font color=#FF0000>registry_code</font></b>) e email. </br> </br>
+		///	Caso o ID já exista na Vindi, o endpoint retorna os dados referente a esse cliente já cadastrado
+		/// ]]>
+		///	
+		/// <para>
+		/// </para>
+		/// 
+		/// </remarks>
 
 
-        [HttpPost]
-		[ProducesResponseType(StatusCodes.Status200OK)]
+		[HttpPost]
+		[ProducesResponseType(typeof(Customer),StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 		public IActionResult Post([FromBody] Customer customer)
 		{

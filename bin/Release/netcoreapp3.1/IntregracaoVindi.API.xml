@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IntregracaoVindi.API</name>
+    </assembly>
+    <members>
+        <member name="M:IntegracaoVindi.API.Controllers.BillsController.Get">
+            <summary>
+            Retorno as faturas existentes
+            </summary>
+            <returns>Dados das faturas</returns>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.BillsController.Post(IntegracaoVindi.API.Model.InsertBill)">
+            <summary>
+            Cria uma fatura.
+            </summary>
+            <returns>Dados da fatura Criada</returns>
+            <remarks>
+            <para>
+            	
+            </para>
+            <![CDATA[	A maioria dos parâmetros deste método são opcionais. O exemplo do RequestBody efetua a emissão de uma fatura avulsa usando apenas os atributos obrigatórios. </br>
+            Sua fatura avulsa deve conter no mínimo um item na lista <b><font color=#FF0000>bill_items</font></b>. Você deve referenciar o produto através do parâmetro <b><font color=#FF0000>product_id</font></b> ou <b><font color=#FF0000>product_code</font></b>.
+            ]]>
+            
+            <para>
+            </para>
+            
+            </remarks>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.ChargeController.Get">
+             <summary>
+             Retorna Cobranças existentes.
+             </summary>
+             <returns>Dados de Cobranças existentes</returns>
+             <remarks>
+             Utilize este método para efetuar o estorno (ou cancelamento) de uma cobrança já efetuada com sucesso. É importante observar que não é possível reverter um estorno realizado com sucesso.
+            Após a operação de estorno, a cobrança assumirá status = canceled.O cancelamento da fatura associda é opcional e pode ser informado através da opção cancel_bill no corpo da requisição.
+             </remarks>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.ChargeController.GetByID(System.Int32)">
+            <summary>
+            Retorna Cobrança a partir de um ID .
+            </summary>
+            <returns>Dados da Cobrança existente</returns>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.ChargeController.Estono(IntegracaoVindi.API.Model.ChargeRefund,System.Int32)">
+             <summary>
+             Estornar uma Cobrança.
+             </summary>
+             <returns>Dados da Cobrança cancelada</returns>
+             <remarks>
+             Utilize este método para efetuar o estorno (ou cancelamento) de uma cobrança já efetuada com sucesso. É importante observar que não é possível reverter um estorno realizado com sucesso.
+            Após a operação de estorno, a cobrança assumirá status = canceled.O cancelamento da fatura associda é opcional e pode ser informado através da opção cancel_bill no corpo da requisição.
+             </remarks>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.CustomersController.Get">
+            <summary>
+            Retorno os clientes cadastrados
+            </summary>
+            <returns>Dados do cliente Criado</returns>
+        </member>
+        <member name="M:IntegracaoVindi.API.Controllers.CustomersController.Post(IntegracaoVindi.API.Model.Customer)">
+            <summary>
+            Cria cliente.
+            </summary>
+            <returns>Dados da fatura Criada</returns>
+            <remarks>
+            <para>
+            	
+            </para>
+            <![CDATA[ Unico campo obrigatório é o <b><font color=#FF0000>name</font></b> </br>
+            Contudo para gerar uma fatura é obrigatório que o cliente tenha o documento (<b><font color=#FF0000>registry_code</font></b>) e email. </br> </br>
+            Caso o ID já exista na Vindi, o endpoint retorna os dados referente a esse cliente já cadastrado
+            ]]>
+            
+            <para>
+            </para>
+            
+            </remarks>
+        </member>
+        <member name="M:IntegracaoVindi.API.Data.Base.SqlHelper.ExecuteScalar(Microsoft.Data.SqlClient.SqlCommand)">
+            <summary>
+            Executa scripts e procedures que retornam um único dado (inserts com id, counts, selects de um único dado)
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntegracaoVindi.API.Data.Base.SqlHelper.ExecuteScalar(System.String,Microsoft.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Executa scripts e procedures que retornam um único dado (inserts com id, counts, selects de um único dado)
+            </summary>
+            <param name="script"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

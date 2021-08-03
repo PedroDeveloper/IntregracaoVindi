@@ -13,6 +13,7 @@ namespace IntegracaoVindi.API.Model
     public class Customer
     {
         public long id { get; set; }
+        public string registry_code { get; set; }
         public string name { get; set; }
         public string email { get; set; }
         public string code { get; set; }

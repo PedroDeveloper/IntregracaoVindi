@@ -5,6 +5,8 @@ E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTm
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\IntregracaoVindi.API.deps.json
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\IntregracaoVindi.API.runtimeconfig.json
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\IntregracaoVindi.API.pdb
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\System.Net.Http.Formatting.dll
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\System.Web.Http.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.dll
@@ -45,6 +47,7 @@ E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTm
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.Core.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.AttributedModel.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Convention.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Hosting.dll
@@ -117,3 +120,4 @@ E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTm
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\PubTmp\Out\IntregracaoVindi.API.xml

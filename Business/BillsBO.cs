@@ -46,6 +46,26 @@ namespace IntegracaoVindi.API.Business
                 throw exception;
             }
         }
+        public Charge RefundBill(ChargeRefund insertRefund,int id)
+        {
+            string result;
+            Charge refund;
+
+
+            try
+            {
+                refund = new Charge();
+                var profileJson = Newtonsoft.Json.JsonConvert.SerializeObject(insertRefund);
+                result = ApiHelper.HttpPostJson($"https://app.vindi.com.br/api/v1/charges/{id}/refund", profileJson);
+                refund = JsonConvert.DeserializeObject<Charge>(result);
+
+                return refund;
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
 
 
         #endregion

@@ -27,6 +27,12 @@ namespace IntegracaoVindi.API.Controllers
 			_config = config;
 		}
 
+		/// <summary>
+		/// Retorno as faturas existentes
+		/// </summary>
+		/// <returns>Dados das faturas</returns>
+
+
 		[EnableCors("Policy1")]
 		[HttpGet]
         public IActionResult Get()
@@ -56,10 +62,26 @@ namespace IntegracaoVindi.API.Controllers
             return response;
         }
 
+		/// <summary>
+		/// Cria uma fatura.
+		/// </summary>
+		/// <returns>Dados da fatura Criada</returns>
+		/// <remarks>
+		/// <para>
+		///		
+		/// </para>
+		///	<![CDATA[	A maioria dos parâmetros deste método são opcionais. O exemplo do RequestBody efetua a emissão de uma fatura avulsa usando apenas os atributos obrigatórios. </br>
+		///	Sua fatura avulsa deve conter no mínimo um item na lista <b><font color=#FF0000>bill_items</font></b>. Você deve referenciar o produto através do parâmetro <b><font color=#FF0000>product_id</font></b> ou <b><font color=#FF0000>product_code</font></b>.
+		/// ]]>
+		///	
+		/// <para>
+		/// </para>
+		/// 
+		/// </remarks>
 
-		[EnableCors("Policy1")]
-		[HttpPost]
-		[ProducesResponseType(StatusCodes.Status200OK)]
+
+		[HttpPost ]
+		[ProducesResponseType(typeof(Bill),StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 		public IActionResult Post([FromBody] InsertBill insertBill)
 		{
@@ -85,7 +107,6 @@ namespace IntegracaoVindi.API.Controllers
 			}
 
 		}
-
 
 
 	}
