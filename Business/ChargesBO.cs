@@ -54,7 +54,7 @@ namespace IntegracaoVindi.API.Business
         #region Retrieve Repository
 
 
-        public List<Charge> Get()	
+        public List<Charge> Get(int? id)	
 		{
 			string result;
 
@@ -62,7 +62,16 @@ namespace IntegracaoVindi.API.Business
 			List<Charge> charges = new List<Charge>();
 			try
 			{
+                if (id>0)
+                {
+					result = ApiHelper.HttpGet($"https://app.vindi.com.br/api/v1/charges?query=customer_id%3D{id}");
+
+				}
+				else
+                {
+
 				result = ApiHelper.HttpGet("https://app.vindi.com.br/api/v1/charges");
+                }
 				charges = JsonConvert.DeserializeObject<List<Charge>>(result.Replace("{\"charges\":", "").Replace("}}]}", "}}]"));
 
 				return charges;
@@ -84,7 +93,6 @@ namespace IntegracaoVindi.API.Business
 			{
 				chargeHolder = new ChargeHolder();
 				charge = new Charge();
-
 				result = ApiHelper.HttpGet($"https://app.vindi.com.br/api/v1/charges/{id}");
 				chargeHolder = JsonConvert.DeserializeObject<ChargeHolder>(result);
 

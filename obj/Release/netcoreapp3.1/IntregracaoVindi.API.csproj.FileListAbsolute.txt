@@ -137,3 +137,4 @@ E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\Syste
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\System.Web.Http.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\bin\Release\netcoreapp3.1\Swashbuckle.Core.dll
 E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.csproj.AssemblyReference.cache
+E:\Study\DEMANDAS\MVP VINDI\Integracao-Vindi.API\obj\Release\netcoreapp3.1\IntregracaoVindi.API.GeneratedMSBuildEditorConfig.editorconfig

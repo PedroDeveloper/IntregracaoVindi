@@ -28,7 +28,7 @@
             
             </remarks>
         </member>
-        <member name="M:IntegracaoVindi.API.Controllers.ChargeController.Get">
+        <member name="M:IntegracaoVindi.API.Controllers.ChargeController.Get(System.Nullable{System.Int32})">
              <summary>
              Retorna Cobranças existentes.
              </summary>

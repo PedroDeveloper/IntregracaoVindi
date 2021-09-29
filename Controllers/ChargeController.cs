@@ -38,7 +38,7 @@ namespace IntegracaoVindi.API.Controllers
 
 		[EnableCors("Policy1")]
 		[HttpGet]
-		public IActionResult Get()
+		public IActionResult Get(int? id)
 		{
 			ChargesBO chargesBO;
 			List<Charge> charges;
@@ -50,7 +50,7 @@ namespace IntegracaoVindi.API.Controllers
 				_log.LogInformation("Starting Get()");
 
 				chargesBO = new ChargesBO(_loggerFactory, _config);
-				charges = chargesBO.Get();
+				charges = chargesBO.Get(id);
 
 				response = Ok(charges);
 
@@ -72,7 +72,7 @@ namespace IntegracaoVindi.API.Controllers
 		/// </summary>
 		/// <returns>Dados da Cobrança existente</returns>
 		[EnableCors("Policy1")]
-		[HttpGet("{id}")]
+		[HttpGet("{Customer_id}")]
 		public IActionResult GetByID(int id)
 		{
 			ChargesBO chargesBO;

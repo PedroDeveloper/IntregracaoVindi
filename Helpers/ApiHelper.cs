@@ -15,7 +15,7 @@ namespace IntregracaoVindi.API.Helpers
     {
         public static string HttpPostJson(string url, string json)
         {
-           string username = "1--P5-XpOhwuRsbzSUKbBVYeoW5ZMtezEYqg9fyNj3w";
+           string username = "VWzGJHLQbg_brFaqkrjnRH8Q6HNY-HgfxYjwValE3JQ";
            string encoded = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes($"{username}"));
            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
            httpWebRequest.ContentType = "application/json";
@@ -44,7 +44,7 @@ namespace IntregracaoVindi.API.Helpers
          public static string HttpGet(string url)
         {
 
-            string username = "1--P5-XpOhwuRsbzSUKbBVYeoW5ZMtezEYqg9fyNj3w";
+            string username = "VWzGJHLQbg_brFaqkrjnRH8Q6HNY-HgfxYjwValE3JQ";
             string encoded = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes($"{username}"));
 
             WebRequest request = WebRequest.Create(url);
